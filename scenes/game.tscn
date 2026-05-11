@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://pscw78o0p28d"]
+
+[ext_resource type="Script" uid="uid://bp0pv62sjhr2a" path="res://scripts/GameManager.gd" id="1_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://df5o3x024jgrd" path="res://scenes/paddle.tscn" id="1_uwrxv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqjtg"]
+size = Vector2(120, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(1013, 120)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.5530295, 0, 0.0024040828, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0.99989945, 0.4292927, 0.3627498, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0.99989945, 0.4292927, 0.3627498, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Game" type="Node2D" unique_id=506724583]
+script = ExtResource("1_lbhrr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1379513034]
+
+[node name="Paddle" parent="." unique_id=851729529 instance=ExtResource("1_uwrxv")]
+position = Vector2(-1, 364)
+
+[node name="Border_Left" type="StaticBody2D" parent="." unique_id=2029275428]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Left" unique_id=797618540]
+position = Vector2(-445, 0)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="ColorRect" type="ColorRect" parent="Border_Left" unique_id=1969652184]
+offset_left = -506.0
+offset_top = -499.0
+offset_right = -384.0
+offset_bottom = 500.0
+
+[node name="Border_Right" type="StaticBody2D" parent="." unique_id=397029223]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Right" unique_id=1187766241]
+position = Vector2(445, 0)
+shape = SubResource("RectangleShape2D_yqjtg")
+
+[node name="ColorRect" type="ColorRect" parent="Border_Right/CollisionShape2D" unique_id=1576032660]
+offset_left = -60.0
+offset_top = -500.0
+offset_right = 62.0
+offset_bottom = 499.0
+
+[node name="Border_Top" type="StaticBody2D" parent="." unique_id=1104155439]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border_Top" unique_id=756748089]
+position = Vector2(0.5, -522)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="ColorRect" type="ColorRect" parent="Border_Top" unique_id=339538000]
+offset_left = -506.0
+offset_top = -582.0
+offset_right = 507.0
+offset_bottom = -462.0
+
+[node name="DeathZone" type="Area2D" parent="." unique_id=405154577]
+position = Vector2(0, 480)
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" unique_id=108096879]
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="Bloecke" type="Node2D" parent="." unique_id=394742391]
+position = Vector2(-54, -430)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=914086871]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=146441661]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 120.0
+theme_override_colors/font_color = Color(0.5862123, 0, 0.10355202, 1)
+text = "Score: 0"
+
+[node name="LivesLabel" type="Label" parent="CanvasLayer" unique_id=1021671452]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.26131004, 0.51364213, 0.23711964, 1)
+text = "Leben: 3"
+
+[node name="GameOverMenu" type="Control" parent="CanvasLayer" unique_id=1850490200]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GameOverMenu" unique_id=1333518120]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1440.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Label" type="Label" parent="CanvasLayer/GameOverMenu" unique_id=538747601]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -163.0
+offset_right = 163.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.7650267, 0, 0.09101712, 1)
+theme_override_font_sizes/font_size = 57
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="CanvasLayer/GameOverMenu" unique_id=1155444713]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.5
+offset_top = -31.0
+offset_right = 32.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqjtg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lnu2h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lbhrr")
+text = "Restart"
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
+[connection signal="pressed" from="CanvasLayer/GameOverMenu/Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOverMenu/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bcjwtuglgvqjh"]
+
+[ext_resource type="Script" uid="uid://bwr2ax03egfrg" path="res://scripts/BallPhysics.gd" id="1_ugknh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xr5yv"]
+
+[node name="Ball" type="CharacterBody2D" unique_id=1072526891]
+collision_layer = 2
+collision_mask = 13
+safe_margin = 0.5
+script = ExtResource("1_ugknh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6313293]
+shape = SubResource("CircleShape2D_xr5yv")

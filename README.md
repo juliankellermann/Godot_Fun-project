@@ -3,7 +3,7 @@
 > Ein dynamischer 2D-Breakout-Klon mit strategischen Roguelike/Deckbuilder-Elementen, entwickelt in Godot 4.
 
 ## Über das Spiel
-BrokeBREAK nimmt das klassische Breakout-Prinzip und erweitert es um moderne Spielmechaniken. Das Ziel ist es nicht nur, Blöcke zu zerstören, sondern taktisch Punkte zu sammeln und sich ein Deck von Blöcken und Artefakten zusammenzubauen um den benötigten Score der nächsten Runde zu erreichen.
+BrokeBREAK nimmt das klassische Breakout-Prinzip und erweitert es um moderne Spielmechaniken. Das Ziel ist es nicht nur, Blöcke zu zerstören, sondern taktisch Punkte und Geld zu sammeln. Baue dir dein eigenes Deck aus Blöcken und Artefakten zusammen, um den benötigten Score für die nächste Runde zu erreichen.
 
 *Dieses Projekt wird entwickelt, um tiefere Einblicke in die Godot Engine, Vektormathematik und saubere Softwarearchitektur (OOP) zu gewinnen.*
 

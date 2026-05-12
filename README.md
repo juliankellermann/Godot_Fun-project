@@ -4,6 +4,7 @@
 
 ## Über das Spiel
 BrokeBREAK nimmt das klassische Breakout-Prinzip und erweitert es um moderne Spielmechaniken. Das Ziel ist es nicht nur, Blöcke zu zerstören, sondern taktisch Punkte zu sammeln und sich ein Deck von Blöcken und Artefakten zusammenzubauen um den benötigten Score der nächsten Runde zu erreichen.
+
 *Dieses Projekt wurde entwickelt, um tiefere Einblicke in die Godot Engine, Vektormathematik und saubere Softwarearchitektur (OOP) zu gewinnen.*
 
 ## Features

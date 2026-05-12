@@ -1,4 +1,4 @@
-# BrokeBREAK 
+# BrokeBREAK (Work in Progress)
 
 > Ein dynamischer 2D-Breakout-Klon mit strategischen Roguelike/Deckbuilder-Elementen, entwickelt in Godot 4.
 

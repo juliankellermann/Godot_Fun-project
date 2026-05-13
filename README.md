@@ -31,7 +31,7 @@ BrokeBREAK nimmt das klassische Breakout-Prinzip und erweitert es um moderne Spi
 
 ##  Installation & Starten
 1. Lade dir die [Godot 4 Engine](https://godotengine.org/download) herunter.
-2. Klone dieses Repository: `git clone https://github.com/juliankellermann/Godot_Fun-project/BrokeBREAK.git`
+2. Klone dieses Repository: `git clone https://github.com/juliankellermann/Godot_Fun-project.git`
 3. Öffne Godot, klicke im Projektmanager auf "Importieren" und wähle die `project.godot` Datei aus dem Ordner.
 4. Drücke `F5` oder klicke auf den "Play"-Button oben rechts, um das Spiel zu starten.
 

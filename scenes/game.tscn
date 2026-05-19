@@ -158,5 +158,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lbhrr")
 text = "Restart"
 
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
-[connection signal="pressed" from="CanvasLayer/GameOverMenu/Button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GameOverMenu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOverMenu/Button" to="." method="_on_restart_button_pressed"]

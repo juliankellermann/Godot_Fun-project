@@ -22,23 +22,18 @@ func _ready():
 	var abstand_x = 130 
 	var abstand_y = 50 
 	
-	
 	var start_x = -320
 	var start_y = -1
-	
 	
 	for y in range(reihen):          
 		for x in range(spalten):    
 			
-			
 			var neuer_block = block_bauplan.instantiate()
 			neuer_block.block_zerstoert.connect(_on_block_zerstoert)
-			
 			
 			var pos_x = start_x + (x * abstand_x)
 			var pos_y = start_y + (y * abstand_y)
 			neuer_block.position = Vector2(pos_x, pos_y)
-			
 			
 			$Bloecke.add_child(neuer_block)
 	

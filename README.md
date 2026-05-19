@@ -1,0 +1,40 @@
+# BrokeBREAK (Work in Progress)
+
+> Ein dynamischer 2D-Breakout-Klon mit strategischen Roguelike/Deckbuilder-Elementen, entwickelt in Godot 4.
+
+## Über das Spiel
+BrokeBREAK nimmt das klassische Breakout-Prinzip und erweitert es um moderne Spielmechaniken. Das Ziel ist es nicht nur, Blöcke zu zerstören, sondern taktisch Punkte und Geld zu sammeln. Baue dir dein eigenes Deck aus Blöcken und Artefakten zusammen, um den benötigten Score für die nächste Runde zu erreichen.
+
+*Dieses Projekt wird entwickelt, um tiefere Einblicke in die Godot Engine, Vektormathematik und saubere Softwarearchitektur (OOP) zu gewinnen.*
+
+## Features
+
+**Aktuell implementiert:**
+* **Physikbasierte Steuerung:** Der Abprallwinkel des Balls lässt sich durch den genauen Trefferpunkt am Paddle strategisch steuern (dynamische Vektorberechnung).
+* **Zerstörbare Umgebung:** Ein dynamisches Gitter aus Blöcken, die bei Zerstörung Punkte an den Game-Manager senden (Signal-basierte Architektur).
+* **Game-Loop:** Lebenssystem inklusive "Ball-Kleben" am Start, Game-Over-Logik und Szenen-Reset.
+
+**Geplante Features (Roadmap):**
+*  **In-Game Shop:** Ein UI-System, mit Economy Elementen (z.B. Interest).
+*  **Taktische Block-Modifikationen:** Die Möglichkeit, Standard-Blöcke per Mausklick durch gekaufte Spezial-Blöcke (z.B. Explosiv, Multiball) zu ersetzen.
+*  **Zielscore Skalierung**
+*  **Bossrunden/Events**
+* ...
+
+##  Steuerung
+* **[A] / [D]** oder **[Pfeiltasten]:** Paddle nach links und rechts bewegen.
+* **[Leertaste] / [Enter]:** Ball vom Paddle abschießen (beim Start oder nach einem Lebensverlust).
+
+##  Tech Stack
+* **Engine:** [Godot Engine 4](https://godotengine.org/)
+* **Sprache:** GDScript
+
+##  Installation & Starten
+1. Lade dir die [Godot 4 Engine](https://godotengine.org/download) herunter.
+2. Klone dieses Repository: `git clone https://github.com/juliankellermann/Godot_Fun-project.git`
+3. Öffne Godot, klicke im Projektmanager auf "Importieren" und wähle die `project.godot` Datei aus dem Ordner.
+4. Drücke `F5` oder klicke auf den "Play"-Button oben rechts, um das Spiel zu starten.
+
+---
+**Entwickelt von:** Julian Kellermann
+**Kontakt:** Julian.kellermann@gmail.com
